@@ -9,42 +9,54 @@ const services = [
     icon: Building2,
     title: "Aseo Industrial Certificado",
     description: "Limpieza profunda de instalaciones industriales con protocolos certificados y personal capacitado.",
+    image: "/images/services/limpieza-industrial.jpg",
   },
-  {
+{
     icon: Sparkles,
-    title: "Mantención de Oficinas",
-    description: "Planes personalizados de mantención y limpieza para espacios corporativos y oficinas.",
+    title: "Tratamientos Acrilicos",
+    description: "Aplicación de tratamientos acrílicos para pisos industriales, mejorando su durabilidad y apariencia.",
+    image: "/images/services/limpieza-industrial.jpg",
   },
   {
     icon: Droplets,
-    title: "Vidrios en Altura",
-    description: "Limpieza especializada de vidrios en altura con equipos certificados y medidas de seguridad.",
+    title: "Limpieza de Vidrios en Altura",
+    description: "Servicios especializados de limpieza de vidrios en altura con equipos y técnicas seguras.",
+    image: "/images/services/limpieza-industrial.jpg",
   },
-  {
-    icon: Wind,
-    title: "Ductería y Clima",
-    description: "Limpieza y mantención de sistemas de ventilación, ductos y equipos de climatización.",
-  },
-  {
-    icon: Sparkles,
-    title: "Lavado de Alfombras",
-    description: "Tratamiento profesional de alfombras y tapices con productos especializados.",
-  },
-  {
+   {
     icon: Zap,
     title: "Electricidad Certificada",
-    description: "Servicios eléctricos certificados por la SEC con garantía y cumplimiento normativo.",
+    description: "Servicios eléctricos certificados para instalaciones residenciales e industriales.",
+    image: "/images/services/limpieza-industrial.jpg",
   },
   {
     icon: Flame,
     title: "Gasfitería Certificada",
-    description: "Instalación y mantención de sistemas de gas certificados según normativa vigente.",
+    description: "Servicios de gasfitería certificados para instalaciones residenciales e industriales.",
+    image: "/images/services/limpieza-industrial.jpg",
   },
-  {
+   {
     icon: Wrench,
     title: "Soldadura Certificada",
-    description: "Trabajos de soldadura industrial con certificación y estándares de calidad.",
+    description: "Servicios de soldadura certificados para proyectos industriales y comerciales.",
+    image: "/images/services/limpieza-industrial.jpg",
   },
+  {
+    icon: Sparkles,
+    title: "Barrido de Grandes Superficiess",
+    description: "Servicios de barrido y limpieza para grandes superficies industriales y comerciales.",
+    image: "/images/services/limpieza-industrial.jpg",
+  },
+  {
+    icon: Wind,
+    title: "Limpiezas y desinfección.",
+    description: "Servicios de limpieza y desinfección para oficinas e industrias, garantizando ambientes saludables.",
+    image: "/images/services/limpieza-industrial.jpg",
+  },
+  
+ 
+  
+ 
 ]
 
 export function ServicesSection() {

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 const navLinks = [
   { name: "Servicios", href: "#servicios" },
@@ -38,9 +39,15 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center font-bold text-xl text-primary-foreground group-hover:scale-110 transition-transform">
-              AM
-            </div>
+           
+           <Image 
+  src="/logo.png" 
+  alt="Aseo Market Logo" 
+  width={80} 
+  height={80}
+  className="group-hover:scale-110 transition-transform"
+/>
+
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-none">Aseo Market</span>
               <span className="text-xs text-muted-foreground">Siempre Contigo</span>

@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Updated color scheme to dark mode with better contrast */
 :root {
-  --background: 220 25% 8%;
-  --foreground: 220 10% 93%;
-  --card: 220 25% 12%;
-  --card-foreground: 220 10% 93%;
+  --background: 222 47% 11%;
+  --foreground: 0 0% 95%;
+  --card: 222 47% 15%;
+  --card-foreground: 0 0% 95%;
   --primary: 4 85% 55%;
-  --primary-foreground: 220 10% 98%;
-  --secondary: 220 25% 18%;
-  --secondary-foreground: 220 10% 93%;
-  --muted: 220 25% 18%;
-  --muted-foreground: 220 10% 65%;
-  --accent: 45 90% 60%;
-  --accent-foreground: 220 25% 8%;
-  --border: 220 25% 22%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222 47% 20%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 222 47% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 4 85% 55%;
+  --accent-foreground: 0 0% 100%;
+  --border: 222 47% 25%;
   --ring: 4 85% 55%;
   --radius: 1rem;
 }
@@ -24,13 +25,116 @@
   border-color: hsl(var(--border));
 }
 
+html,
 body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Enhanced dark background with better contrast gradients */
+body {
+  background: linear-gradient(135deg, #0b0f1a 0%, #1a1f2e 50%, #0b0f1a 100%);
+  color: hsl(var(--foreground));
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(219, 29, 34, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(219, 29, 34, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(219, 29, 34, 0.1) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 30s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Adding new animations for sophisticated hero background */
+@keyframes flow-slow {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-50px) translateY(-20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes flow-reverse {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(50px) translateY(20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-flow-slow {
+  animation: flow-slow 15s ease-in-out infinite;
+}
+
+.animate-flow-reverse {
+  animation: flow-reverse 12s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
 }
 
 .noise-bg::before {
@@ -42,14 +146,19 @@ html {
   z-index: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Updated glass effect for dark mode */
 .glass {
-  background: rgba(15, 22, 41, 0.6);
+  background: rgba(26, 31, 46, 0.7);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #f59e0b 0%, #ffffff 50%, #f59e0b 100%);
+  background: linear-gradient(135deg, #db1d22 0%, #ef4444 50%, #db1d22 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -69,10 +178,15 @@ html {
   }
 }
 
+/* Enhanced neon border with more glow */
 .neon-border {
-  box-shadow: 0 0 10px rgba(219, 29, 34, 0.3), 0 0 20px rgba(219, 29, 34, 0.2), inset 0 0 10px rgba(219, 29, 34, 0.1);
+  box-shadow: 0 0 15px rgba(219, 29, 34, 0.4), 0 0 30px rgba(219, 29, 34, 0.25), inset 0 0 15px rgba(219, 29, 34, 0.15);
 }
 
 .neon-border:hover {
-  box-shadow: 0 0 20px rgba(219, 29, 34, 0.5), 0 0 40px rgba(219, 29, 34, 0.3), inset 0 0 20px rgba(219, 29, 34, 0.2);
+  box-shadow: 0 0 25px rgba(219, 29, 34, 0.6), 0 0 50px rgba(219, 29, 34, 0.4), inset 0 0 25px rgba(219, 29, 34, 0.25);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
 }

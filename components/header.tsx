@@ -42,13 +42,13 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="Aseo Market Logo"
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               className="group-hover:scale-110 transition-transform"
             />
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-none text-gray-900"></span>
-              <span className="text-xs text-gray-600 font-bold">Aseo y Mantencion Industrial</span>
+              <span className="text-xs text-gray-600 font-bold"></span>
             </div>
           </a>
 

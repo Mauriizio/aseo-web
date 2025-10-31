@@ -6,12 +6,13 @@ import { CheckCircle2, Shield } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] max-h-[900px] flex items-center justify-center overflow-hidden bg-gray-50">
+    <section className="relative min-h-[100svh] max-h-[900px] flex items-center justify-center overflow-hidden noise-bg">
+
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-gray-50 to-gray-100" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10" />
         <svg
-          className="absolute inset-0 w-full h-full wave-bg opacity-25"
+          className="absolute inset-0 w-full h-full wave-bg opacity-30"
           viewBox="0 0 1440 800"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -21,9 +22,9 @@ export function Hero() {
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#DB1D22" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#EF4444" stopOpacity="0.15" />
-              <stop offset="100%" stopColor="#DB1D22" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#DB1D22" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#F59E0B" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="#DB1D22" stopOpacity="0.3" />
             </linearGradient>
           </defs>
         </svg>
@@ -37,10 +38,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-sm mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm border border-border mb-8"
           >
-            <Shield className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-gray-900">Personal Certificado • Cobertura Nacional</span>
+            <Shield className="w-4 h-4 text-accent" />
+            <span className="text-sm font-medium">Personal Certificado • Cobertura Nacional</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -52,7 +53,7 @@ export function Hero() {
           >
             <span className="gradient-text">Servicios de Aseo</span>
             <br />
-            <span className="text-gray-900">Industrial Certificado</span>
+            <span className="text-foreground">Industrial Certificado</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -60,7 +61,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             Certificados, protocolos claros y respuesta rápida. Más de 15 años brindando soluciones profesionales de
             aseo y mantención industrial.
@@ -76,7 +77,7 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 text-base shadow-lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 text-base"
             >
               <a href="#servicios">Ver Servicios</a>
             </Button>
@@ -84,7 +85,7 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full px-8 text-base border-2 border-gray-300 hover:bg-white bg-white/80 backdrop-blur-sm text-gray-900 shadow-sm"
+              className="rounded-full px-8 text-base border-2 hover:bg-secondary bg-transparent"
             >
               <a href="#contacto">Cotizar Ahora</a>
             </Button>
@@ -95,18 +96,18 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600"
+            className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-accent" />
               <span>15+ años de experiencia</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-accent" />
               <span>Personal certificado</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <CheckCircle2 className="w-5 h-5 text-accent" />
               <span>Respuesta en 24hrs</span>
             </div>
           </motion.div>
@@ -120,14 +121,15 @@ export function Hero() {
         transition={{ duration: 0.6, delay: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <div className="w-6 h-10 rounded-full border-2 border-gray-400/60 flex items-start justify-center p-2">
+        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-            className="w-1.5 h-1.5 rounded-full bg-gray-500"
+            className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50"
           />
         </div>
       </motion.div>
     </section>
   )
 }
+

@@ -41,60 +41,80 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="casos" className="py-24 relative overflow-hidden">
-      {/* Fondo tenue para contraste */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+    <section
+      id="casos"
+      className="
+        relative py-24 overflow-hidden
+        bg-gradient-to-b from-[#11151c] via-[#0b0e13] to-[#0b0e13]
+        border-t border-white/5
+      "
+    >
+      {/* Textura sutil para profundidad */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.12) 1px, transparent 0)",
+          backgroundSize: "38px 38px",
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Encabezado */}
         <Reveal direction="up" className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Lo que dicen <span className="gradient-text">nuestros clientes</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Lo que dicen{" "}
+            <span className="text-primary">nuestros clientes</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Testimonios reales de empresas que confían en nuestro trabajo
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Tarjetas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((t, index) => (
-            <Reveal key={t.company} direction="right" delay={index * 0.1}>
+            <Reveal key={t.company} direction="up" delay={index * 0.1}>
               <article
                 className="
-                  glass rounded-2xl p-6 h-full flex flex-col
-                  border border-white/10 hover:border-primary/50
+                  flex flex-col rounded-2xl h-full p-6
+                  border border-white/10 bg-white/[0.03] backdrop-blur-sm
                   transition-all duration-300
-                  hover:shadow-[0_0_24px_rgba(219,29,34,0.25)]
-                  bg-card/50
+                  hover:bg-white/[0.06] hover:border-primary/40
+                  hover:shadow-[0_0_25px_rgba(219,29,34,0.25)]
                 "
               >
-                {/* Encabezado con logo y estrellas */}
-                <div className="flex items-center justify-between mb-4">
+                {/* Logo + estrellas */}
+                <div className="flex items-center justify-between mb-5">
                   <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/5 ring-1 ring-white/10">
                     <Image
                       src={t.logo}
                       alt={`${t.company} logo`}
                       fill
-                      className="object-contain p-2"
                       sizes="48px"
+                      className="object-contain p-2"
                     />
                   </div>
+
                   <div className="flex items-center gap-0.5">
                     {Array.from({ length: t.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
                 </div>
 
-                {/* Cita */}
-                <p className="text-foreground/90 leading-relaxed mb-6 flex-grow">
+                {/* Texto */}
+                <p className="text-gray-200 leading-relaxed mb-6 flex-grow">
                   “{t.text}”
                 </p>
 
                 {/* Firma */}
                 <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between">
                   <div className="min-w-0">
-                    <p className="font-semibold text-sm truncate">{t.company}</p>
-                    <p className="text-xs text-muted-foreground">{t.time}</p>
+                    <p className="font-semibold text-sm text-white">
+                      {t.company}
+                    </p>
+                    <p className="text-xs text-gray-400">{t.time}</p>
                   </div>
                 </div>
               </article>

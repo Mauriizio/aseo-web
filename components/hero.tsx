@@ -104,7 +104,7 @@ export function Hero() {
                   alt="Certificación SEG"
                   fill
                   sizes="64px"
-                  className="object-contain p-2"
+                  className="object-contain"
                 />
               </div>
 

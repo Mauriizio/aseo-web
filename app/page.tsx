@@ -17,9 +17,12 @@ export default function Home() {
       <Hero />
       <ServicesSection />
       <BenefitsSection />
-      <TestimonialsSection />
+       <CTASection />
       <ClientsSection />
-      <CTASection />
+      
+      <TestimonialsSection />
+      
+     
       <ContactSection />
       <Footer />
     </main>

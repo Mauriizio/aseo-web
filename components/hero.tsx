@@ -6,21 +6,32 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle2, Shield } from "lucide-react"
 import Image from "next/image"
 
-const IMAGES = ["/hero/hero1.png", "/hero/hero2.png", "/hero/hero3.png", "/hero/hero4.png"]
-const DURATIONS = [8000, 4000, 4000, 4000] // la 1ª imagen dura el doble
+const IMAGES = [
+  "/hero/hero1.png",
+  "/hero/hero2.png",
+  "/hero/hero3.png",
+  "/hero/hero4.png",
+  "/hero/hero5.png",
+  "/hero/hero6.png",
+  "/hero/hero7.png",
+  "/hero/hero8.png",
+]
+
+// todas a 3s; si quieres distintas, cambia aquí
+const DURATIONS = Array(IMAGES.length).fill(3000) as number[]
 
 export function Hero() {
   const [index, setIndex] = useState(0)
+  const [prevIndex, setPrevIndex] = useState<number | null>(null)
 
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>
-    const schedule = () => {
-      timer = setTimeout(() => {
-        setIndex((prev) => (prev + 1) % IMAGES.length)
-      }, DURATIONS[index] ?? 5000)
-    }
-    schedule()
-    return () => clearTimeout(timer)
+    const id = setTimeout(() => {
+      setIndex((prev) => {
+        setPrevIndex(prev) // usamos la anterior para el fade-out
+        return (prev + 1) % IMAGES.length
+      })
+    }, DURATIONS[index] ?? 3000)
+    return () => clearTimeout(id)
   }, [index])
 
   return (
@@ -28,44 +39,66 @@ export function Hero() {
       className="
         relative min-h-[100svh] max-h-[900px]
         flex items-center justify-center overflow-hidden
-        bg-[#12161f]  /* fallback por si no carga la imagen */
+        bg-[#12161f]
         pt-24 md:pt-28 pb-16
       "
     >
-      {/* Background Slideshow (4 imágenes) */}
+      {/* Background Slideshow sin negro intermedio */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={IMAGES[index]}
-              alt=""
-              aria-hidden="true"
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              draggable={false}
-              className="object-cover object-center brightness-105 contrast-110 saturate-105"
-            />
-          </motion.div>
+        {/* Imagen base (siempre visible) */}
+        <Image
+          key={`base-${index}`}
+          src={IMAGES[index]}
+          alt=""
+          aria-hidden="true"
+          fill
+          priority={index === 0}
+          sizes="100vw"
+          draggable={false}
+          className="object-cover object-center brightness-105 contrast-110 saturate-105"
+        />
+
+        {/* Imagen anterior para fade-out por encima */}
+        <AnimatePresence initial={false}>
+          {prevIndex !== null && prevIndex !== index && (
+            <motion.div
+              key={`fade-${prevIndex}`}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.9 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={IMAGES[prevIndex]}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="100vw"
+                draggable={false}
+                className="object-cover object-center brightness-105 contrast-110 saturate-105"
+              />
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
 
-      {/* Content (tarjeta negra con 60% de opacidad) */}
+      {/* Tarjeta (60% opacidad) */}
       <div className="container mx-auto px-3 sm:px-4 z-10 relative">
-        <div className="max-w-7xl mx-8">
-          <div className="rounded-3xl border border-white/15 bg-black/60 backdrop-blur-sm shadow-[0_10px_50px_rgba(0,0,0,0.35)] px-6 sm:px-10 py-10 sm:py-14">
-
+        <div className="max-w-7xl mx-3 sm:mx-6 lg:mx-8">
+          <div
+            className="
+              rounded-2xl sm:rounded-3xl
+              border border-white/15
+              bg-black/60 backdrop-blur-sm
+              shadow-[0_10px_40px_rgba(0,0,0,0.25)]
+              px-5 sm:px-8 md:px-10
+              py-8 sm:py-10 md:py-14
+            "
+          >
             {/* Certificación + Badge */}
-            <div className="mb-8 flex items-center justify-center md:justify-start gap-4">
-              {/* Logo redondo de certificación */}
-              <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full ring-2 ring-white/20 overflow-hidden shadow-lg bg-white">
+            <div className="mb-6 sm:mb-8 flex items-center justify-center md:justify-start gap-4">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full ring-2 ring-white/20 overflow-hidden shadow-lg bg-white">
                 <Image
                   src="/cert/seg.webp"
                   alt="Certificación SEG"
@@ -88,13 +121,16 @@ export function Hero() {
               </motion.div>
             </div>
 
-            {/* Texto centrado dentro de la card */}
+            {/* Texto centrado */}
             <div className="max-w-5xl mx-auto text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+                className="
+                  text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+                  font-bold mb-6 leading-tight
+                "
               >
                 <span className="gradient-text">Mantención y Aseo</span>
                 <br />
@@ -105,7 +141,10 @@ export function Hero() {
                 initial={{ opacity: 0, y: -24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed"
+                className="
+                  text-base sm:text-lg md:text-xl text-gray-200
+                  mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed
+                "
               >
                 Con mas de 25 años en el rubro, tenemos la experiencia necesaria para obtener los mejores resultados en el exigente mundo del aseo.
               </motion.p>
@@ -115,7 +154,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 sm:mb-12"
               >
                 <Button
                   asChild
@@ -134,7 +173,7 @@ export function Hero() {
                 </Button>
               </motion.div>
 
-              {/* Indicadores de confianza */}
+              {/* Indicadores */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -159,12 +198,12 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator (oculto en mobile) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
           <motion.div

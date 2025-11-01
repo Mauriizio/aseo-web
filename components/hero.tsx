@@ -174,25 +174,32 @@ export function Hero() {
               </motion.div>
 
               {/* Indicadores */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-200"
-              >
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span>25+ años de experiencia</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span>Personal certificado</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span>Respuesta en 24hrs</span>
-                </div>
-              </motion.div>
+             
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.5 }}
+  className="
+    flex flex-col items-start gap-3
+    text-sm text-gray-200
+    mx-auto w-fit
+    sm:flex-row sm:flex-wrap sm:justify-center sm:items-center sm:gap-6
+  "
+>
+  <div className="flex items-center gap-2">
+    <CheckCircle2 className="w-5 h-5 text-primary" />
+    <span>25+ años de experiencia</span>
+  </div>
+  <div className="flex items-center gap-2">
+    <CheckCircle2 className="w-5 h-5 text-primary" />
+    <span>Personal certificado</span>
+  </div>
+  <div className="flex items-center gap-2">
+    <CheckCircle2 className="w-5 h-5 text-primary" />
+    <span>Respuesta en 24hrs</span>
+  </div>
+</motion.div>
+
             </div>
           </div>
         </div>

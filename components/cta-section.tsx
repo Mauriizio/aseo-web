@@ -61,7 +61,7 @@ export function CTASection() {
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-gray-900 leading-tight">Cuéntanos tu necesidad</p>
-                  <p className="text-sm text-gray-600">Formulario o llamada breve.</p>
+                  <p className="text-sm text-gray-600">Formulario o llamada breve  <br /> Agenda de visita.</p>
                 </div>
               </div>
             </li>
@@ -84,7 +84,7 @@ export function CTASection() {
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-gray-900 leading-tight">Plan y propuesta</p>
-                  <p className="text-sm text-gray-600">Protocolos claros + costo transparente.</p>
+                  <p className="text-sm text-gray-600">Protocolos claros <br /> Costo transparente.</p>
                 </div>
               </div>
             </li>
@@ -107,7 +107,7 @@ export function CTASection() {
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-gray-900 leading-tight">Ejecución y seguimiento</p>
-                  <p className="text-sm text-gray-600">Personal certificado + control de calidad.</p>
+                  <p className="text-sm text-gray-600">Personal certificado <br /> Control de calidad.</p>
                 </div>
               </div>
             </li>

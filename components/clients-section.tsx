@@ -14,10 +14,12 @@ const clients = [
 export function ClientsSection() {
   return (
     <section
+      id="clientes"                                 // <-- 🔹 ancla para el header
       className="
         relative py-20 px-6 sm:px-10 lg:px-16
         bg-gradient-to-br from-[#0b0e13] via-[#11151c] to-[#0b0e13]
         border-t border-white/5
+        
       "
     >
       {/* Título y descripción */}

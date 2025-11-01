@@ -11,7 +11,7 @@ const testimonials = [
     logo: "/client/client1.png",
     text: "Muy responsables. Dejan todo impecable y llegan a la hora.",
     rating: 5,
-    time: "cliente desde 2023",
+    time: "cliente desde 2018",
   },
   {
     name: "Valle de Atxondo",
@@ -19,7 +19,7 @@ const testimonials = [
     logo: "/client/client2.png",
     text: "Equipo serio y ordenado. Facilitan la operación día a día.",
     rating: 5,
-    time: "cliente desde 2022",
+    time: "cliente desde 2010",
   },
   {
     name: "Dentay Chile",
@@ -27,7 +27,7 @@ const testimonials = [
     logo: "/client/client5.png",
     text: "Protocolos claros y resultados consistentes. Recomendados.",
     rating: 5,
-    time: "cliente desde 2021",
+    time: "cliente desde 2022",
   },
   {
     name: "Comercial Cortesano",
@@ -35,7 +35,7 @@ const testimonials = [
     logo: "/client/client4.png",
     text: "Respuesta rápida y buen trato. Se nota la experiencia.",
     rating: 5,
-    time: "cliente desde 2020",
+    time: "cliente desde 2012",
   },
 ]
 

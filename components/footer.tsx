@@ -116,48 +116,68 @@ export function Footer() {
           </div>
 
           {/* Contacto */}
-          <div className="max-w-xs">
-            <h4 className="text-primary font-semibold mb-4 uppercase tracking-wide">Contacto</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center md:items-start justify-center md:justify-start gap-3">
-                <Phone className="w-4 h-4 text-primary mt-0.5" />
-                <a href="tel:+56995554242" className="hover:text-primary transition-colors">
-                  +56 9 95542422
-                </a>
-              </li>
-              <li className="flex items-center md:items-start justify-center md:justify-start gap-3">
-                <Mail className="w-4 h-4 text-primary mt-0.5" />
-                <a
-                  href="mailto:aseomarketspa@gmail.com"
-                  className="hover:text-primary transition-colors break-all"
-                >
-                  aseomarketspa@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center md:items-start justify-center md:justify-start gap-3">
-                <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                <span>Los Militares 5620 Of. 905</span>
-              </li>
-              <li className="flex items-center md:items-start justify-center md:justify-start gap-3">
-                <Globe className="w-4 h-4 text-primary mt-0.5" />
-                <a
-                  href="https://aseomarketspa.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  aseomarketspa.com
-                </a>
-              </li>
-            </ul>
-          </div>
+<div className="max-w-xs w-full">
+  <h4 className="text-primary font-semibold mb-4 uppercase tracking-wide text-center md:text-left">
+    Contacto
+  </h4>
+
+  {/* Grilla: 2 columnas (icono | texto) */}
+  <ul
+    className="
+      grid grid-cols-[1.125rem_auto]  /* 18px para ícono, resto para texto */
+      gap-x-3 gap-y-3
+      w-max mx-auto md:mx-0           /* centra el bloque en mobile; a la izquierda en desktop */
+      justify-items-start text-left    /* contenidos alineados a la izquierda */
+      text-sm
+    "
+  >
+    {/* Teléfono */}
+    <li className="contents">
+      <Phone className="w-4 h-4 text-primary" />
+      <a href="tel:+56995554242" className="hover:text-primary transition-colors">
+        +56 9 9555 4242
+      </a>
+    </li>
+
+    {/* Email */}
+    <li className="contents">
+      <Mail className="w-4 h-4 text-primary" />
+      <a
+        href="mailto:aseomarketspa@gmail.com"
+        className="hover:text-primary transition-colors break-all"
+      >
+        aseomarketspa@gmail.com
+      </a>
+    </li>
+
+    {/* Dirección */}
+    <li className="contents">
+      <MapPin className="w-4 h-4 text-primary" />
+      <span>Los Militares 5620 Of. 905</span>
+    </li>
+
+    {/* Web */}
+    <li className="contents">
+      <Globe className="w-4 h-4 text-primary" />
+      <a
+        href="https://aseomarketspa.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-primary transition-colors"
+      >
+        aseomarketspa.com
+      </a>
+    </li>
+  </ul>
+</div>
+
         </div>
 
         {/* Línea inferior */}
         <div className="pt-6 border-t border-white/10 text-center">
          <p className="text-sm text-gray-500">
   © {new Date().getFullYear()}{" "}
-  <span className="text-white font-medium">Aseo Market SPA</span>. 2025 ||
+  <span className="text-white font-medium">Aseo Market SPA</span>. 
   <br />
   Diseño Web -{" "}
   <a

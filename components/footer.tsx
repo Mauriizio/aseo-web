@@ -14,11 +14,11 @@ export function Footer() {
         overflow-hidden
       "
     >
-      {/* Marca de agua del logo (archivo SIN white) */}
-      <div className="pointer-events-none select-none absolute -right-16 -bottom-24 opacity-[0.06] md:opacity-[0.08]">
-        <div className="relative w-[520px] h-[520px] md:w-[620px] md:h-[620px]">
+      {/* Marca de agua del logo centrada */}
+      <div className="pointer-events-none select-none absolute inset-0 flex items-center justify-center opacity-[0.06] md:opacity-[0.08]">
+        <div className="relative w-[380px] h-[380px] sm:w-[480px] sm:h-[480px] md:w-[600px] md:h-[600px]">
           <Image
-            src="/logo.png"        // <- logo transparente (sin white)
+            src="/logo-black.png" // logo sin fondo blanco
             alt="Aseo Market watermark"
             fill
             className="object-contain"
@@ -44,7 +44,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-5 justify-center md:justify-start">
               <div className="relative w-12 h-12 rounded-xl overflow-hidden">
                 <Image
-                  src="/logo-white.png" // miniatura en blanco para contraste
+                  src="/logo-white.png"
                   alt="Logo Aseo Market"
                   fill
                   className="object-contain"
@@ -122,7 +122,7 @@ export function Footer() {
               <li className="flex items-center md:items-start justify-center md:justify-start gap-3">
                 <Phone className="w-4 h-4 text-primary mt-0.5" />
                 <a href="tel:+56995554242" className="hover:text-primary transition-colors">
-                  +56 9 9555 4242
+                  +56 9 95542422
                 </a>
               </li>
               <li className="flex items-center md:items-start justify-center md:justify-start gap-3">
@@ -155,11 +155,21 @@ export function Footer() {
 
         {/* Línea inferior */}
         <div className="pt-6 border-t border-white/10 text-center">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()}{" "}
-            <span className="text-white font-medium">Aseo Market SPA</span>. Todos los derechos
-            reservados.
-          </p>
+         <p className="text-sm text-gray-500">
+  © {new Date().getFullYear()}{" "}
+  <span className="text-white font-medium">Aseo Market SPA</span>. 2025 ||
+  <br />
+  Diseño Web -{" "}
+  <a
+    href="https://www.maurizio.dev"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary hover:text-white transition-colors"
+  >
+    maurizio.dev
+  </a>
+</p>
+
         </div>
       </div>
     </footer>

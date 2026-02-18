@@ -116,7 +116,7 @@ export function Hero() {
               >
                 <Shield className="w-4 h-4 text-primary drop-shadow" />
                 <span className="text-sm font-medium text-gray-100">
-                  Personal Certificado • Cobertura Nacional
+                  Personal Calificado • Cobertura Nacional
                 </span>
               </motion.div>
             </div>
@@ -132,7 +132,7 @@ export function Hero() {
                   font-bold mb-6 leading-tight
                 "
               >
-                <span className="gradient-text">Mantención y Aseo</span>
+                <span className="gradient-text">Mantenciones & Aseo</span>
                 <br />
                 <span className="text-white">Industrial Certificado</span>
               </motion.h1>

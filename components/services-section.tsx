@@ -6,14 +6,14 @@ import { Building2, Sparkles, Wind, Droplets, Zap, Flame, Wrench } from "lucide-
 import Image from "next/image"
 
 const services = [
-  { icon: Zap, title: "Electricidad Certificada", description: "Servicios eléctricos certificados para instalaciones residenciales e industriales.", image: "/images/services/electricidad2.png" },
-  { icon: Flame, title: "Gasfitería Certificada", description: "Servicios de gasfitería certificados para instalaciones residenciales e industriales.", image: "/images/services/gasfiter.png" },
-  { icon: Wind, title: "Ductos de ventilación", description: "Instalación y limpieza de ductos de ventilación, campanas de cocina y motores de extracción.", image: "/images/services/ductoss.png" },
+  { icon: Zap, title: "Electricidad y Certificados", description: "Servicios eléctricos domiciliarios e industriales.", image: "/images/services/electricidad2.png" },
+  { icon: Flame, title: "Gasfitería", description: "Servicios de gasfitería certificados para instalaciones residenciales e industriales.", image: "/images/services/gasfiter.png" },
+  { icon: Wind, title: "Ductos & Campanas", description: "Instalación y limpieza de ductos de ventilación, campanas de cocina y motores de extracción.", image: "/images/services/ductoss.png" },
   { icon: Sparkles, title: "Barrido de Grandes Superficies", description: "Servicios de barrido y limpieza para grandes superficies industriales y comerciales.", image: "/images/services/barrido.png" },
-  { icon: Sparkles, title: "Tratamientos Acrílicos", description: "Aplicación de tratamientos acrílicos para pisos industriales, mejorando su durabilidad y apariencia.", image: "/images/services/acrilico.png" },
-  { icon: Building2, title: "Personal de Aseo Certificado", description: "Personal de aseo certificado y capacitado para mantener la limpieza en entornos administrativos e industriales.", image: "/images/services/personal.png" },
+  { icon: Sparkles, title: "Tratamientos Acrílicos en Pisos", description: "Aplicación de tratamientos acrílicos para pisos industriales, mejorando su durabilidad y apariencia.", image: "/images/services/acrilico.png" },
+  { icon: Building2, title: "Personal de Aseo Exclusivo", description: "Personal de aseo calificado y capacitado para mantener la limpieza en entornos administrativos e industriales.", image: "/images/services/personal.png" },
   { icon: Droplets, title: "Limpieza de Vidrios en Altura", description: "Servicios especializados de limpieza de vidrios en altura con equipos y técnicas seguras.", image: "/images/services/vidrios.png" },
-  { icon: Wrench, title: "Soldadura Certificada", description: "Servicios de soldadura certificados para proyectos industriales y comerciales.", image: "/images/services/soldadura.png" },
+  { icon: Wrench, title: "Soldadura", description: "Servicios de soldadura calificados para proyectos comerciales e industriales.", image: "/images/services/soldadura.png" },
 ]
 
 export function ServicesSection() {

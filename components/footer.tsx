@@ -134,8 +134,8 @@ export function Footer() {
     {/* Teléfono */}
     <li className="contents">
       <Phone className="w-4 h-4 text-primary" />
-      <a href="tel:+56995554242" className="hover:text-primary transition-colors">
-        +56 9 9555 4242
+      <a href="tel:+56976263853" className="hover:text-primary transition-colors">
+        +56 9 76263853
       </a>
     </li>
 

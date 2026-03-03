@@ -6,14 +6,14 @@ import { Building2, Sparkles, Wind, Droplets, Zap, Flame, Wrench } from "lucide-
 import Image from "next/image"
 
 const services = [
-  { icon: Zap, title: "Electricidad y Certificados", description: "Servicios eléctricos domiciliarios e industriales.", image: "/images/services/electricidad2.png" },
-  { icon: Flame, title: "Gasfitería", description: "Servicios de gasfitería certificados para instalaciones residenciales e industriales.", image: "/images/services/gasfiter.png" },
-  { icon: Wind, title: "Ductos & Campanas", description: "Instalación y limpieza de ductos de ventilación, campanas de cocina y motores de extracción.", image: "/images/services/ductoss.png" },
-  { icon: Sparkles, title: "Barrido de Grandes Superficies", description: "Servicios de barrido y limpieza para grandes superficies industriales y comerciales.", image: "/images/services/barrido.png" },
-  { icon: Sparkles, title: "Tratamientos Acrílicos en Pisos", description: "Aplicación de tratamientos acrílicos para pisos industriales, mejorando su durabilidad y apariencia.", image: "/images/services/acrilico.png" },
-  { icon: Building2, title: "Personal de Aseo Exclusivo", description: "Personal de aseo calificado y capacitado para mantener la limpieza en entornos administrativos e industriales.", image: "/images/services/personal.png" },
-  { icon: Droplets, title: "Limpieza de Vidrios en Altura", description: "Servicios especializados de limpieza de vidrios en altura con equipos y técnicas seguras.", image: "/images/services/vidrios.png" },
-  { icon: Wrench, title: "Soldadura", description: "Servicios de soldadura calificados para proyectos comerciales e industriales.", image: "/images/services/soldadura.png" },
+  { icon: Zap, title: "Electricidad", description: "Servicios eléctricos domiciliarios e industriales.", image: "/images/services/electricidad2.png" },
+  { icon: Flame, title: "Gasfitería", description: "Servicios de gasfitería para instalaciones residenciales e industriales.", image: "/images/services/gasfiter.png" },
+  { icon: Wind, title: "Ductos & Campanas (Residencial e Industrial)", description: "Instalación y limpiezas, ductos, campanas de cocina y motores de extracción.", image: "/images/services/ductoss.png" },
+  { icon: Sparkles, title: "Persianas Electricas", description: "Cortinas Roller, Persianas Electricas y Manuales, Termopanel, Aluminio y PVC.", image: "/images/services/persianas.png" },
+  { icon: Sparkles, title: "Tratamientos Acrílicos en Pisos", description: "Aplicación de tratamientos acrílicos e impermeabilizantes para pisos industriales y residenciales.", image: "/images/services/acrilico.png" },
+  { icon: Building2, title: "Personal de Aseo", description: "Personal de aseo capacitado para mantener la limpieza en entornos administrativos e industriales.", image: "/images/services/personal.png" },
+  { icon: Droplets, title: "Limpieza de Vidrios en Altura", description: "Servicios especializados en limpieza de vidrios.", image: "/images/services/vidrios.png" },
+  { icon: Wrench, title: "Soldadura", description: "Servicios de soldadura para proyectos comerciales e industriales.", image: "/images/services/soldadura.png" },
 ]
 
 export function ServicesSection() {

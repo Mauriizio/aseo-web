@@ -11,8 +11,8 @@ const benefits = [
   },
   {
     icon: Users,
-    title: "Personal Certificado",
-    description: "Equipo capacitado y certificado en todas las áreas de servicio.",
+    title: "Personal Calificado",
+    description: "Profesionales especializados en cada área, industrial y residenciales.",
   },
   {
     icon: MapPin,

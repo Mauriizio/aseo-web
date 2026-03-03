@@ -13,7 +13,7 @@ const socialLinks = [
   {
     icon: Phone,
     label: "Teléfono",
-    href: "tel:+56995554242",
+    href: "tel:+56976263853",
     color: "hover:bg-primary",
   },
   {

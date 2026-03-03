@@ -64,7 +64,7 @@ export function ContactSection() {
 
               <div className="space-y-4">
                 <a
-                  href="tel:+56995554242"
+                  href="tel:+56976263853"
                   className="
                     flex items-center gap-4 p-4
                     rounded-2xl bg-white
@@ -79,7 +79,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Teléfono</p>
-                    <p className="font-semibold text-gray-900 select-all">+56 9 9555 4242</p>
+                    <p className="font-semibold text-gray-900 select-all">+56 9 76263853</p>
                   </div>
                 </a>
 
@@ -190,7 +190,7 @@ export function ContactSection() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="bg-white border-gray-300 focus-visible:ring-primary"
-                    placeholder="+56 9 1234 5678"
+                    placeholder="+56 976263853"
                   />
                 </div>
               </div>

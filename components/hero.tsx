@@ -134,7 +134,7 @@ export function Hero() {
               >
                 <span className="gradient-text">Mantenciones & Aseo</span>
                 <br />
-                <span className="text-white">Industrial Certificado</span>
+                <span className="text-white">Industrial Calificado</span>
               </motion.h1>
 
               <motion.p
@@ -146,7 +146,7 @@ export function Hero() {
                   mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed
                 "
               >
-                Con mas de 25 años en el rubro, tenemos la experiencia necesaria para obtener los mejores resultados en el exigente mundo del aseo.
+                Con mas de 25 años en el rubro, tenemos la experiencia necesaria para obtener los mejores resultados.
               </motion.p>
 
               {/* CTAs */}
@@ -188,11 +188,11 @@ export function Hero() {
 >
   <div className="flex items-center gap-2">
     <CheckCircle2 className="w-5 h-5 text-primary" />
-    <span>25+ años de experiencia</span>
+    <span>Servicios Integrales</span>
   </div>
   <div className="flex items-center gap-2">
     <CheckCircle2 className="w-5 h-5 text-primary" />
-    <span>Personal certificado</span>
+    <span>Certificado</span>
   </div>
   <div className="flex items-center gap-2">
     <CheckCircle2 className="w-5 h-5 text-primary" />

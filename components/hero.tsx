@@ -123,19 +123,17 @@ export function Hero() {
 
             {/* Texto centrado */}
             <div className="max-w-5xl mx-auto text-center">
-              <motion.h1
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="
-                  text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-                  font-bold mb-6 leading-tight
-                "
-              >
-                <span className="gradient-text">Mantenciones & Aseo</span>
-                <br />
-                <span className="text-white">Industrial Calificado</span>
-              </motion.h1>
+             <motion.h1 className="text-4xl sm:text-6xl md:text-7xl font-bold"> 
+  {/* Título Principal */}
+  <span className="gradient-text block">
+    Aseo Market SPA
+  </span>
+
+  {/* Subtítulo: Solo un poco más pequeño que el de arriba */}
+  <span className="text-white block text-[0.85em] sm:text-[0.9em] tracking-tighter leading-tight mt-1">
+    Extracción e Inyección de aire
+  </span>
+</motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: -24 }}
@@ -146,7 +144,7 @@ export function Hero() {
                   mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed
                 "
               >
-                Con mas de 25 años en el rubro, tenemos la experiencia necesaria para obtener los mejores resultados.
+                Con mas de 20 años en el rubro, somos especialistas en sistemas de estracción e inyección de aire.
               </motion.p>
 
               {/* CTAs */}
@@ -188,15 +186,15 @@ export function Hero() {
 >
   <div className="flex items-center gap-2">
     <CheckCircle2 className="w-5 h-5 text-primary" />
-    <span>Servicios Integrales</span>
+    <span>Venta</span>
   </div>
   <div className="flex items-center gap-2">
     <CheckCircle2 className="w-5 h-5 text-primary" />
-    <span>Certificado</span>
+    <span>Fabricación e Instalación</span>
   </div>
   <div className="flex items-center gap-2">
     <CheckCircle2 className="w-5 h-5 text-primary" />
-    <span>Respuesta en 24hrs</span>
+    <span>Limpieza</span>
   </div>
 </motion.div>
 

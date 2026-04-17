@@ -6,15 +6,15 @@ import { Building2, Sparkles, Wind, Droplets, Zap, Flame, Wrench } from "lucide-
 import Image from "next/image"
 
 const services = [
-  { icon: Zap, title: "Electricidad", description: "Servicios eléctricos domiciliarios e industriales.", image: "/images/services/electricidad2.png" },
-  { icon: Flame, title: "Gasfitería", description: "Servicios de gasfitería para instalaciones residenciales e industriales.", image: "/images/services/gasfiter.png" },
-  { icon: Wind, title: "Ductos & Campanas (Residencial e Industrial)", description: "Instalación y limpiezas, ductos, campanas de cocina y motores de extracción.", image: "/images/services/ductoss.png" },
-  { icon: Sparkles, title: "Persianas Electricas", description: "Cortinas Roller, Persianas Electricas y Manuales, Termopanel, Aluminio y PVC.", image: "/images/services/persianas.png" },
-  { icon: Sparkles, title: "Tratamientos Acrílicos en Pisos", description: "Aplicación de tratamientos acrílicos e impermeabilizantes para pisos industriales y residenciales.", image: "/images/services/acrilico.png" },
-  { icon: Building2, title: "Personal de Aseo", description: "Personal de aseo capacitado para mantener la limpieza en entornos administrativos e industriales.", image: "/images/services/personal.png" },
-  { icon: Droplets, title: "Limpieza de Vidrios en Altura", description: "Servicios especializados en limpieza de vidrios.", image: "/images/services/vidrios.png" },
-  { icon: Wrench, title: "Soldadura", description: "Servicios de soldadura para proyectos comerciales e industriales.", image: "/images/services/soldadura.png" },
-]
+  { icon: Zap, title: "Fabricación de Campanas Industriales a medida", description: "Diseño y fabricación de campanas industriales a medida para necesidades específicas.", image: "services/1.png" },
+  { icon: Flame, title: "Limpieza de Campanas Industriales", description: "Servicios de limpieza para campanas industriales.", image: "services/2.png" },
+  { icon: Wind, title: "Venta de motores de extracción", description: "Venta de motores de extracción para sistemas de ventilación industrial.", image: "services/3.png" },
+  { icon: Sparkles, title: "Limpieza de motores de extracción", description: "Servicios de limpieza para motores de extracción.", image: "services/4.png" },
+  { icon: Sparkles, title: "Fabricación e Instalación de ductos de ventilación", description: "Diseño y fabricación de ductos de ventilación para sistemas industriales.", image: "services/5.png" },
+  { icon: Building2, title: "Limpieza de ductos", description: "Servicios de limpieza para ductos de ventilación.", image: "services/6.png" },
+  { icon: Droplets, title: "Venta de desengrasante industrial", description: "Venta de desengrasantes industriales para aplicaciones específicas.", image: "services/7.png" },
+  { icon: Wrench, title: "Venta de lavaloza industrial y papelería", description: "Venta de lavaloza industrial y papelería (Nova y Confort).", image: "services/8.png" },
+]   
 
 export function ServicesSection() {
   return (

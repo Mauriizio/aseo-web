@@ -56,7 +56,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed md:pr-4">
-              Servicios profesionales de aseo y mantención industrial con más de 25 años de
+              Servicios profesionales de aseo y mantención industrial con más de 20 años de
               experiencia en el rubro.
             </p>
           </div>
@@ -67,22 +67,22 @@ export function Footer() {
             <ul className="space-y-2 text-sm inline-flex flex-col items-center md:items-start">
               <li>
                 <a href="#servicios" className="hover:text-primary transition-colors">
-                  Aseo Industrial
+                  Venta
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary transition-colors">
-                  Mantención de Oficinas
+                  Fabricación e Instalación
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary transition-colors">
-                  Vidrios en Altura
+                  Limpieza
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="hover:text-primary transition-colors">
-                  Electricidad Certificada
+                 Extracción e Inyección de aire
                 </a>
               </li>
             </ul>
